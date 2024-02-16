@@ -1,0 +1,16 @@
+.MenuThirdLevel {
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: var(--color-gray-800);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    display: block;
+    &--active {
+
+        
+    }
+    &:hover {
+        color: var(--color-main);
+    }
+}
