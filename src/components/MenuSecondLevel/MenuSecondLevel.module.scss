@@ -14,8 +14,10 @@
     }
 
     &__subitem {
+        display: none;
 
         &--open{
+            display: block;
             &:last-child {
                 margin-bottom: 20px;
             }

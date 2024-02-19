@@ -45,8 +45,8 @@ export const getStaticProps: GetStaticProps<ICourseProps> = async ({
   const { data: page } = await axios.get<IPageModel>(
     `${API_PATH.BY_ALIAS.path}/${params.alias}`
   );
-  const { data: products } = await axios.post<IProductModel>(
-    `${API_PATH.FIND_PRODUCT.path}/${params.alias}`,
+  const { data: products } = await axios.post<IProductModel[]>(
+    `${API_PATH.FIND_PRODUCT.path}`,
     {
       category: page.category,
       limit: 10,

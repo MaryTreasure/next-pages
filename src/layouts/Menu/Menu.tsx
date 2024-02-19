@@ -10,6 +10,15 @@ import MenuFirstLevel from "@/components/MenuFirstLevel/MenuFirstLevel";
 const Menu = () => {
   const { menu, firstCategory, setMenu } = useAppContext();
 
+  const openSecondLevel = (secondCategory: string) => {
+    setMenu(menu.map(m => {
+      if (m._id.secondCategory == secondCategory) {
+        m.isOpened = !m.isOpened;
+      }
+      return m;
+    }))
+  }
+
   const firstLevelMenu: IFirstLevelMenuItem[] = [
     {
       route: "courses",
@@ -44,6 +53,7 @@ const Menu = () => {
           firstLevelMenu={firstLevelMenu}
           menu={menu}
           firstCategory={firstCategory}
+          openSecondLevel={openSecondLevel}
         />
       }
     </div>

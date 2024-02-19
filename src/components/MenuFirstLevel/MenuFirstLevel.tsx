@@ -11,6 +11,7 @@ const MenuFirstLevel: FC<IMenuFirstLevelProps> = ({
   menu: outerMenu,
   firstCategory,
   className,
+  openSecondLevel,
   ...other
 }) => {
   return (
@@ -30,7 +31,7 @@ const MenuFirstLevel: FC<IMenuFirstLevelProps> = ({
               <span>{menu.name}</span>
             </div>
           </Link>
-          {menu.id === firstCategory && <MenuSecondLevel menu={outerMenu} route={menu.route}/>}
+          {menu.id === firstCategory && <MenuSecondLevel openSecondLevel={openSecondLevel} menu={outerMenu} route={menu.route}/>}
         </div>
       ))}
     </>

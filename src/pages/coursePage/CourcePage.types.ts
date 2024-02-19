@@ -4,5 +4,5 @@ export interface ICourseProps extends IObject {
     menu: IMenuItem[];
     firstCategory: number;
     page: IPageModel,
-    products: IProductModel
+    products: IProductModel[]
 }
