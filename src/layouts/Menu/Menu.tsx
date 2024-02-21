@@ -1,11 +1,8 @@
-import { AppContext, useAppContext } from "@/AppContext";
-import { IFirstLevelMenuItem, ITopLevelCategory } from "@/types";
-import React, { useContext } from "react";
-import CoursesIcon from "@/Assets/icons/CoursesIcon.svg";
-import ServisesIcon from "@/Assets/icons/ServisesIcon.svg";
-import ProductsIcon from "@/Assets/icons/ProductsIcon.svg";
-import ВooksIcon from "@/Assets/icons/BookIcon.svg";
+import {  useAppContext } from "@/AppContext";
+import React from "react";
+
 import MenuFirstLevel from "@/components/MenuFirstLevel/MenuFirstLevel";
+import { firstLevelMenu } from "@/utils/firstLevelMenu";
 
 const Menu = () => {
   const { menu, firstCategory, setMenu } = useAppContext();
@@ -19,32 +16,7 @@ const Menu = () => {
     }))
   }
 
-  const firstLevelMenu: IFirstLevelMenuItem[] = [
-    {
-      route: "courses",
-      name: "Курсы",
-      icon: <CoursesIcon />,
-      id: ITopLevelCategory.COURSES,
-    },
-    {
-      route: "servises",
-      name: "Сервисы",
-      icon: <ServisesIcon />,
-      id: ITopLevelCategory.SERVICES,
-    },
-    {
-      route: "products",
-      name: "Продукты",
-      icon: <ProductsIcon />,
-      id: ITopLevelCategory.PRODUCTS,
-    },
-    {
-      route: "books",
-      name: "Книги",
-      icon: <ВooksIcon />,
-      id: ITopLevelCategory.BOOKS,
-    },
-  ];
+ 
 
   return (
     <div>
