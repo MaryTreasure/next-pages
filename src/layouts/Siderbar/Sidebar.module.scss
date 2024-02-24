@@ -1,0 +1,11 @@
+.Sidebar {
+    display: grid;
+    align-content: start;
+    gap: 20px;
+
+
+    &__logo {
+        margin-top: 35px;
+
+    }
+}

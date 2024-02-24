@@ -1,7 +1,7 @@
 import { withLayout } from "@/HOC/withLayout/withLayout";
 import { API_PATH } from "@/constants";
-import { ICourseProps } from "@/pages/coursePage/CourcePage.types";
-import CoursePage from "@/pages/coursePage/CoursePage";
+import { ICourseProps } from "@/pages/TopPage/TopPage.types";
+import CoursePage from "@/pages/TopPage/TopPage";
 import {
   IMenuItem,
   IPageModel,
